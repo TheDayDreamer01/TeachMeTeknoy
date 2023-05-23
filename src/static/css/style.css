@@ -1,0 +1,2862 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: poppins;
+}
+
+body, html {
+  height: 100%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+#root {
+  height: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  font-weight: normal;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: none;
+}
+
+span.HorizontalLine {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: rgb(216, 216, 216);
+  border-radius: 50px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+h5 {
+  font-size: 12px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  padding: 6px 0;
+}
+
+input[type=text],
+input[type=email],
+input[type=password],
+input[type=number],
+select,
+textarea {
+  height: 40px;
+  border-radius: 10px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.Spacer {
+  height: 10px;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * Start Content : @Components
+ *********************************************/
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * Start Content : @Navigation Bar
+ *********************************************/
+nav.navbar {
+  height: 8vh;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #600C0D;
+}
+nav.navbar div.__container, nav.navbar a.__logo, nav.navbar form.searchbar {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: None;
+  align-items: center;
+  flex-direction: None;
+}
+nav.navbar div.__container {
+  margin: 0 14vw;
+  /*********************************************
+   * Start Content : @Logo
+   *********************************************/
+  /*********************************************
+   * End Content : @Logo Container
+   *********************************************/
+  /*********************************************
+   * Start Content : @Profile-Dropdown
+   *********************************************/
+  /*********************************************
+   * End Content : @Profile-Dropdown
+   *********************************************/
+}
+nav.navbar div.__container a.__logo, nav.navbar div.__container div.__profile {
+  width: 280px;
+  flex-grow: 1;
+}
+nav.navbar div.__container a.__logo img {
+  width: 3rem;
+}
+nav.navbar div.__container a.__logo span.__name {
+  margin-left: 10px;
+  font-weight: bold;
+  font-family: montserrat;
+  font-size: 1.2rem;
+  font-weight: None;
+  line-height: None;
+  color: #FBF7F7;
+}
+nav.navbar div.__container a.__logo span.__name span:first-child {
+  color: #F7A440;
+}
+nav.navbar div.__container a.__logo span.__name span:last-child {
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: #FBF7F7;
+  -webkit-text-fill-color: #600C0D;
+}
+nav.navbar div.__container div.__profile {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: None;
+}
+nav.navbar div.__container div.__profile .__dropdown {
+  overflow: hidden;
+}
+nav.navbar div.__container div.__profile .__dropdown:hover .__content {
+  display: block;
+}
+nav.navbar div.__container div.__profile .__dropdown .__button {
+  width: 40px;
+  background-color: transparent;
+}
+nav.navbar div.__container div.__profile .__dropdown .__content {
+  z-index: 1;
+  display: None;
+  position: absolute;
+  width: 160px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #FBF7F7;
+}
+nav.navbar div.__container div.__profile .__dropdown .__content a {
+  padding: 12px 16px;
+  display: block;
+  text-align: left;
+}
+nav.navbar div.__container div.__profile .__dropdown .__content a:hover {
+  background: rgb(235, 235, 235);
+}
+nav.navbar div.__container div.__profile .__dropdown .__content a:last-child {
+  color: red;
+}
+
+/*********************************************
+ * End Content : @Navigation Bar
+ *********************************************/
+/*********************************************
+ * Start Content : @Search Bar
+ *********************************************/
+form.searchbar {
+  flex: 1 0 auto;
+  padding: 0 1rem;
+}
+form.searchbar input.__bar {
+  height: 2.5rem;
+  width: 24vw;
+  padding: 0 1.5rem;
+  border-radius: 50px 0 0 50px;
+  font-size: 16px;
+}
+form.searchbar button.__button {
+  width: 3rem;
+  height: 2.5rem;
+  border-radius: 0 50px 50px 0;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #fdead3;
+}
+
+/*********************************************
+ * End Content : @Search Bar
+ *********************************************/
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.subject {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.subject div.__title {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.subject div.__title h3 {
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #999999;
+}
+section.subject div.__title button {
+  background-color: transparent;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.subject div.__title button img {
+  width: 26px;
+}
+section.subject h4 {
+  padding: 10px 0;
+  font-weight: bold;
+  color: #F7A440;
+}
+section.subject div.__subject div.__follow-subject {
+  padding: 6px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.subject div.__subject div.__follow-subject p {
+  font-size: 16px;
+}
+section.subject div.__subject div.__follow-subject button {
+  cursor: pointer;
+  padding: 2px 8px;
+  border-radius: 12px;
+  background-color: #e6e6e6;
+  font-size: 14px;
+  transition: 0.25s ease;
+}
+section.subject div.__subject div.__follow-subject button:hover {
+  background-color: #cccccc;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.post {
+  width: inherit;
+  margin: 20px 40px 0 40px;
+  border-radius: 15px;
+  background-color: #FBF7F7;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+section.post div.__header {
+  padding: 10px 20px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.post div.__header div.__right {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.post div.__header div.__right p {
+  font-size: 12px;
+}
+section.post div.__header div.__right button {
+  margin-left: 15px;
+}
+section.post div.__header div.__right button img {
+  cursor: pointer;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.post img.__photo {
+  height: 280px;
+  width: 100%;
+  background-image: None;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.post div.__main {
+  padding: 10px 30px;
+}
+section.post div.__main p.__message {
+  font-size: 16px;
+}
+section.post div.__footer {
+  padding: 0 30px;
+}
+section.post div.__footer div.__comment-container {
+  padding: 14px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.post div.__footer div.__comment-container a.__comment {
+  cursor: pointer;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.post div.__footer div.__comment-container a.__comment:hover p {
+  transition: 0.25s ease;
+  color: #F7A440;
+}
+section.post div.__footer div.__comment-container a.__comment img {
+  width: 24px;
+}
+section.post div.__footer div.__comment-container a.__comment p {
+  margin-left: 10px;
+  font-size: 14px;
+}
+section.post div.__footer div.__comment-container p.__subject {
+  padding: 4px 20px;
+  border-radius: 15px;
+  background-color: #e6e6e6;
+  font-size: 14px;
+}
+
+section.reviews {
+  width: inherit;
+  margin: 20px 40px 0 40px;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+section.reviews div.main-container {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.reviews div.main-container div.reviews-container {
+  width: 100%;
+}
+section.reviews div.main-container div.reviews-container div.main-star {
+  width: inherit;
+  padding-right: 20px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.reviews div.main-container div.reviews-container div.main-star p {
+  font-size: 37px;
+  color: #F7A440;
+  font-weight: bolder;
+  padding-left: 10px;
+}
+section.reviews div.main-container div.reviews-container div.post {
+  padding-bottom: 25px;
+}
+section.reviews div.main-container div.reviews-container div.comments-container {
+  width: inherit;
+  padding: 10px;
+}
+section.reviews div.main-container div.reviews-container div.comments-container div.name-date {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.reviews div.main-container div.reviews-container div.comments-container div.name-date p {
+  font-style: italic;
+  font-size: 14px;
+  padding-right: 15px;
+}
+section.reviews div.main-container div.reviews-container div.comments {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 5px 35px 0 75px;
+}
+section.reviews div.main-container div.reviews-container div.comments p {
+  max-width: 600px;
+  font-size: 17px;
+  line-height: 19px;
+  word-wrap: break-word;
+}
+section.reviews div.main-container div.reviews-container div.comments div.stars {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.reviews div.main-container div.reviews-container div.comments div.stars img {
+  height: 20px;
+  width: 21px;
+}
+section.reviews div.main-container div.reviews-container div.comments div.stars p {
+  padding-left: 10px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.create-post {
+  padding: 0 20px;
+  margin: 0 40px;
+  width: inherit;
+  height: 120px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #FBF7F7;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: Center;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.create-post > div {
+  flex-grow: 1;
+}
+section.create-post div:first-child {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.create-post div:first-child a.__avatar {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+section.create-post div:first-child h3 {
+  padding-left: 10px;
+  color: #999999;
+}
+section.create-post div:last-child {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.create-post div:last-child a {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+  padding: 2px 25px;
+  border-radius: 20px;
+  width: 100%;
+  transition: 0.25s ease;
+  font-size: 16px;
+}
+section.create-post div:last-child a img {
+  margin: 0 10px;
+}
+section.create-post div:last-child a:hover {
+  background-color: #e6e6e6;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+.__event-title input {
+  width: 100%;
+  border: 1px solid black;
+}
+
+div.card {
+  width: 100%;
+  margin: auto 30px;
+  height: 720px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+div.card .__header {
+  background-color: #F7A440;
+  height: 40px;
+  padding-left: 20px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.card .__header button img {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+div.card .__content {
+  height: calc(100% - 40px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.card .__content .__left-event, div.card .__content .__right-event {
+  padding: 10px 30px;
+  width: 50%;
+}
+div.card .__content .__left-event .__heading {
+  padding: 15px 0;
+  line-height: 1;
+}
+div.card .__content .__left-event .__heading h1 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 56px;
+  color: #F7A440;
+}
+div.card .__content .__left-event .__heading p {
+  font-size: 14px;
+  font-style: italic;
+}
+div.card .__content .__left-event .__leftside .__event-title input {
+  width: 100%;
+  border: 0.5px solid #858585;
+}
+div.card .__content .__left-event .__leftside .__event-link {
+  margin: 10px 0;
+}
+div.card .__content .__left-event .__leftside .__event-link label, div.card .__content .__left-event .__leftside .__event-link input {
+  display: inline;
+}
+div.card .__content .__left-event .__leftside .__event-link input {
+  width: 100%;
+  border: 0.5px solid #858585;
+}
+div.card .__content .__left-event .__card-container {
+  height: 340px;
+  margin: 20px 0;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+div.card .__content .__left-event .__card-container p {
+  font-size: 14px;
+  padding: 10px 14px;
+}
+div.card .__content .__left-event .__card-container img {
+  width: 100%;
+  height: 260px;
+  height: None;
+  width: None;
+  background-image: None;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+div.card .__content .__left-event .__choices {
+  text-align: right;
+  margin: 0 10px;
+}
+div.card .__content .__left-event .__choices button {
+  margin: 0 3px;
+  padding: 0;
+  border: none;
+  background-color: #FBF7F7;
+  background-color: transparent;
+}
+div.card .__content .__left-event .__choices button img {
+  width: 20px;
+  height: 20px;
+  border-radius: 5px;
+}
+div.card .__content .__right-event .__rightside {
+  margin-top: 20px;
+}
+div.card .__content .__right-event .__rightside .__event-dropdown select {
+  border: 0.5px solid #858585;
+  width: 100%;
+}
+div.card .__content .__right-event .__rightside .label-event {
+  display: block;
+  font-size: 10px;
+  letter-spacing: 0.01em;
+  margin-bottom: 1px;
+}
+div.card .__content .__right-event .__rightside .__event-description {
+  margin: 10px 0;
+}
+div.card .__content .__right-event .__rightside .__event-description textarea {
+  min-height: 200px;
+  padding: 5px;
+  resize: none;
+  width: 100%;
+  border: 0.5px solid #858585;
+}
+div.card .__content .__right-event .__rightside .__price-date {
+  display: flex;
+}
+div.card .__content .__right-event .__rightside .__price-date .event-price input, div.card .__content .__right-event .__rightside .__price-date .event-date input {
+  display: inline-block;
+}
+div.card .__content .__right-event .__rightside .__price-date label {
+  display: inline-block;
+  margin-right: 10px;
+}
+div.card .__content .__right-event .__rightside .__price-date .event-price {
+  position: relative;
+  display: inline;
+  margin-left: 72px;
+}
+div.card .__content .__right-event .__rightside .__price-date .event-price span {
+  position: absolute;
+  left: 65px;
+  top: 12px;
+}
+div.card .__content .__right-event .__rightside .__price-date input.price {
+  width: 100px;
+  height: 25px;
+  padding-left: 40px;
+  font-size: 13px;
+  border: 0.5px solid #858585;
+  border-radius: 5px;
+}
+div.card .__content .__right-event .__rightside .__price-date span {
+  font-size: 13px;
+  font-weight: bold;
+  color: #600C0F;
+  line-height: 23px;
+}
+div.card .__content .__right-event .__rightside .__price-date .event-date {
+  display: inline;
+  margin-left: 87px;
+}
+div.card .__content .__right-event .__rightside .__price-date .event-date input.date {
+  width: 120px;
+  height: 25px;
+  border: 0.5px solid #858585;
+  border-radius: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+div.card .__content .__right-event .__rightside .__participants-time {
+  display: flex;
+}
+div.card .__content .__right-event .__rightside .__participants-time > div {
+  width: 50%;
+}
+div.card .__content .__right-event .__rightside .__participants-time .num-participants label {
+  font-size: 12px;
+  line-height: 12px;
+  letter-spacing: 0.01em;
+  margin-right: 10px;
+  inline-size: 110px;
+  overflow-wrap: break-word;
+  display: inline-block;
+  text-align: right;
+}
+div.card .__content .__right-event .__rightside .__participants-time .num-participants input {
+  height: 30px;
+  width: 50%;
+  font-size: 12px;
+  border: 0.5px solid #858585;
+  border-radius: 5px;
+  padding: 0;
+  text-align: center;
+}
+div.card .__content .__right-event .__rightside .__participants-time div.time {
+  margin-left: 15px;
+}
+div.card .__content .__right-event .__rightside .__participants-time div.time label {
+  display: inline-block;
+  margin-right: 10px;
+}
+div.card .__content .__right-event .__rightside .__participants-time div.time input.time {
+  box-sizing: border-box;
+  height: 23px;
+  width: 90px;
+  font-size: 12px;
+  border: 0.5px solid #858585;
+  border-radius: 5px;
+  text-align: center;
+}
+div.card .__content .__right-event .__rightside .__event-payment {
+  margin-top: 20px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: None;
+  flex-direction: row;
+  border: 0.5px solid #858585;
+  border-radius: 10px;
+  padding: 5px 20px;
+}
+div.card .__content .__right-event .__rightside .__event-payment p {
+  margin-right: 15px;
+}
+div.card .__content .__right-event .__rightside .__event-payment .__checkbox {
+  flex: 1 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+div.card .__content .__right-event .__rightside .__event-payment .__checkbox span {
+  background-color: rgb(240, 240, 240);
+  padding: 2px 10px;
+  margin: 5px;
+}
+div.card .__content .__right-event .__rightside .__event-payment .__checkbox span input, div.card .__content .__right-event .__rightside .__event-payment .__checkbox span label {
+  display: inline;
+}
+div.card .__content .__right-event .__rightside .__event-payment .__checkbox span label {
+  margin-left: 15px;
+}
+div.card .__content .__right-event .__rightside .__event-button {
+  float: right;
+  margin: 20px 0;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 8px 50px;
+  transition: 0.25s ease;
+  background-color: #F7A440;
+}
+div.card .__content .__right-event .__rightside .__event-button:hover {
+  background-color: #f58d0f;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.event-joined {
+  width: 100%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+section.event-joined .__header {
+  height: 30px;
+  background-color: #F7A440;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+section.event-joined .__header p {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+  font-weight: bold;
+}
+section.event-joined .__content {
+  background-color: white;
+  min-width: 50px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+section.event-joined .__content .__event {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-start;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+  border: 1px solid rgb(228, 228, 228);
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+}
+section.event-joined .__content .__event .__event-detail {
+  margin-top: 10px;
+}
+section.event-joined .__content .__event .__event-detail h4 {
+  font-size: 14px;
+}
+section.event-joined .__content .__event .__event-detail p {
+  font-size: 12px;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.main .background-half {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .left, section.main .background-half .right {
+  flex: 1 0 auto;
+  width: 50%;
+}
+section.main .background-half .left {
+  padding: 30px;
+}
+section.main .background-half .left div.checkout-title {
+  padding-top: 10px;
+}
+section.main .background-half .left div.checkout-title h1 {
+  color: #FBCA10;
+  line-height: 40px;
+  font-weight: bolder;
+  font-size: 40px;
+}
+section.main .background-half .left div.checkout-title p {
+  font-size: 18px;
+  font-family: "Segoe UI";
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  line-height: 22px;
+}
+section.main .background-half .left div.cart {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 15px 10px;
+}
+section.main .background-half .left div.cart .cart-container {
+  padding: 20px;
+  height: 400px;
+  width: 500px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: #FBF7F7;
+  border-radius: 15px;
+  /* width */
+}
+section.main .background-half .left div.cart .cart-container div.body {
+  max-height: 327px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding: 5px 5px 5px 10px;
+}
+section.main .background-half .left div.cart .cart-container div.body .item {
+  padding: 3px 0;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .workshop-title {
+  display: flex;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .workshop-title img {
+  width: 15px;
+  height: 15px;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .workshop-title h6 {
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 600;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price p.tutor {
+  font-size: 14px;
+  padding-right: 5px;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price p.line {
+  height: 19px;
+  border-left: 2.5px solid #600C0D;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price img {
+  padding: 0 5px 0 10px;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price a.chat {
+  font-size: 12px;
+  color: #F7A440;
+  padding-top: 2px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+section.main .background-half .left div.cart .cart-container div.body .item .tutor-price p.price {
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 55px;
+}
+section.main .background-half .left div.cart .cart-container .total {
+  text-align: right;
+  margin-top: 12px;
+}
+section.main .background-half .left div.cart .cart-container .total p {
+  font-size: 12px;
+  font-weight: 700;
+}
+section.main .background-half .left div.cart .cart-container .total p span.total-price {
+  color: #600C0D;
+  font-size: 18px;
+  margin-left: 10px;
+}
+section.main .background-half .left div.cart .cart-container ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+section.main .background-half .left .payment-methods {
+  padding: 20px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .left .payment-methods div.container p {
+  font-size: 18px;
+  font-weight: bolder;
+  color: #FBCA10;
+}
+section.main .background-half .left .payment-methods div.container .__container {
+  height: 105px;
+  width: 500px;
+  border: 2px solid #DDDDDD;
+  border-radius: 5px;
+  padding: 10px;
+}
+section.main .background-half .left .payment-methods div.container .__container input, section.main .background-half .left .payment-methods div.container .__container label {
+  width: 200px;
+}
+section.main .background-half .left .payment-methods div.container .__container .row1,
+section.main .background-half .left .payment-methods div.container .__container .row2 {
+  display: flex;
+  height: 50%;
+  justify-content: center;
+}
+section.main .background-half .left div.button {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .left div.button .submit {
+  width: 125px;
+  height: 30px;
+  border: none;
+  font-size: 14px;
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  background-color: #E17126;
+  border-radius: 5px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  float: right;
+  margin-top: 8px;
+  cursor: pointer;
+}
+section.main .background-half .left div.button .submit:hover {
+  background-color: #F7A440;
+}
+section.main .background-half .right {
+  padding: 30px;
+}
+section.main .background-half .right div.title {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.title h1 {
+  font-size: 40px;
+  color: #FBCA10;
+  font-weight: bolder;
+}
+section.main .background-half .right div.payment-status {
+  padding: 35px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.payment-status section.container {
+  background-color: white;
+  height: 240px;
+  width: 500px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+section.main .background-half .right div.payment-status section.container div.header {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  height: 30px;
+  width: inherit;
+  background-color: #600D0F;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+section.main .background-half .right div.payment-status section.container div.header p {
+  margin-left: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+section.main .background-half .right div.payment-status section.container .content {
+  padding: 15px;
+  max-height: 190px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+section.main .background-half .right div.payment-status section.container .content .items {
+  width: 100%;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 3px;
+}
+section.main .background-half .right div.payment-status section.container .content .items div.group {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-grow: None;
+  flex-direction: None;
+  width: 50%;
+}
+section.main .background-half .right div.payment-status section.container .content .items div.group img {
+  margin-right: 5px;
+}
+section.main .background-half .right div.payment-status section.container .content .items div.group .event-name {
+  font-size: 11px;
+  line-height: 13px;
+  word-wrap: break-word;
+  max-width: 225px;
+}
+section.main .background-half .right div.payment-status section.container .content .items .status, section.main .background-half .right div.payment-status section.container .content .items .status-confirmed {
+  text-align: center;
+  font-size: 13px;
+  font-style: italic;
+  color: #858585;
+}
+section.main .background-half .right div.payment-status section.container .content .items .status-confirmed {
+  width: 15%;
+  color: #38CB3A;
+}
+section.main .background-half .right div.payment-status section.container .content .items .meeting-link {
+  width: 20%;
+  font-size: 10px;
+  font-weight: 600;
+  text-decoration: underline;
+  color: #F7A440;
+}
+section.main .background-half .right div.tutor-summary {
+  padding: 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container {
+  width: 100%;
+  height: 327px;
+  background-color: #FBF7F7;
+  margin-bottom: 25px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  /* width */
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.header {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  height: 35px;
+  background-color: #600D0F;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.header img {
+  height: 12px;
+  margin: 0 5px 0 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.header p {
+  font-size: 12px;
+  color: white;
+  padding: 2px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content {
+  padding: 20px 25px 10px 25px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container {
+  max-height: 165px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  padding-bottom: 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container .item {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  justify-content: space-between;
+  padding: 2px 0;
+  width: 100%;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container .item div.group {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container .item div.group img {
+  margin-right: 5px;
+  height: 15px;
+  width: 7px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container .item div.group p {
+  font-weight: 600;
+  font-size: 13px;
+  width: 1000px;
+  word-wrap: break-word;
+  max-width: 300px;
+  line-height: 14px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .item-container .item p.price {
+  color: #858585;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .total {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .total p {
+  font-size: 12px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container div.content .total .total-price {
+  font-size: 15px;
+  color: #F91018;
+  font-weight: bold;
+}
+section.main .background-half .right div.tutor-summary section.summary-container ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  background: #FFFFFF;
+  border: 1px solid #D2D0D0;
+  height: 70px;
+  padding: 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .title {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+  width: 35%;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .title p {
+  line-height: 13px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #600F12;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods div.vertical-line {
+  border-left: 2px solid #505050;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .group {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+  width: 55%;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .group .details .channel {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .group .details .channel img {
+  margin-right: 3px;
+  color: black;
+  height: 10px;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .group .details .channel p.account {
+  font-size: 12px;
+  margin-right: 10px;
+  font-weight: 600;
+}
+section.main .background-half .right div.tutor-summary section.summary-container .payment-methods .group .details .channel p.info {
+  font-size: 11px;
+}
+section.main .background-half .right div.tutor-summary div.proof {
+  text-align: right;
+}
+section.main .background-half .right div.tutor-summary div.proof a {
+  font-size: 10px;
+  font-style: italic;
+  text-decoration: underline;
+  color: #C1171A;
+  font-weight: 700;
+  cursor: pointer;
+}
+section.main .background-half .right div.tutor-summary div.proof a img {
+  margin-right: 3px;
+}
+section.main .background-half .right div.tutor-summary div.proof a:hover {
+  color: black;
+}
+section.main .background-half .right div.tutor-summary div.summary-navigate {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background-half .right div.tutor-summary div.summary-navigate button img {
+  padding: 2px;
+}
+section.main .background-half .right div.tutor-summary hr {
+  margin-top: 5px;
+}
+
+.op {
+  margin: 5px 15px 5px 10px;
+  border-radius: 20px;
+  background-color: #FBF7F7;
+  overflow: hidden;
+  float: left;
+  box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+}
+
+.op label {
+  float: left;
+  line-height: 1.5em;
+  width: 8em;
+  height: 4em;
+}
+
+.op label span {
+  text-align: center;
+  display: block;
+  font-size: 13px;
+  line-height: 20px;
+}
+
+.op label input {
+  position: absolute;
+  display: none;
+  color: #fff !important;
+}
+
+/* selects all of the text within the input element and changes the color of the text */
+.op label input + span {
+  color: black;
+}
+
+/* This will declare how a selected input will look giving generic properties */
+.op input:checked + span {
+  color: #ffffff;
+  text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+}
+
+.pay input:checked + span {
+  background-color: #600C0D;
+}
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.background-error {
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  transition: 0.4s ease;
+}
+section.background-error .__error-prompt {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 380px;
+  height: 330px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: white;
+  border-radius: 10px;
+  -webkit-animation: slideIn 0.3s ease;
+          animation: slideIn 0.3s ease;
+}
+section.background-error .__error-prompt .__heading {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+  background-color: #600C0D;
+  height: 120px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+section.background-error .__error-prompt .__heading img {
+  height: 50px;
+}
+section.background-error .__error-prompt .__status {
+  height: calc(100% - 120px);
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.background-error .__error-prompt .__status .__message {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+section.background-error .__error-prompt .__status .__message h1 {
+  font-family: montserrat;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: None;
+  color: #600C0D;
+  padding: 5px 0;
+}
+section.background-error .__error-prompt .__status .__message p {
+  text-align: center;
+  margin: 15px 40px;
+}
+section.background-error .__error-prompt .__status .__message button {
+  background-color: #600C0D;
+  margin-top: 10px;
+  padding: 5px 28px;
+  color: white;
+  border-radius: 50px;
+  transition: 0.25s ease;
+}
+section.background-error .__error-prompt .__status .__message button:hover {
+  background-color: #330607;
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 50%;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    top: 0%;
+  }
+  to {
+    top: 50%;
+  }
+}
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+section.main .background {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background div.chat-container section.container {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  height: 800px;
+  width: 1200px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.15);
+}
+section.main .background div.chat-container section.container div.column {
+  min-width: 25%;
+  padding: 20px 10px 20px 10px;
+  height: inherit;
+  border-radius: 15px;
+}
+section.main .background div.chat-container section.container div.column div.searchbar {
+  padding-bottom: 8px;
+  display: flex;
+  width: 100%;
+}
+section.main .background div.chat-container section.container div.column div.searchbar input.search-input {
+  height: 35px;
+  width: 100%;
+  min-width: 175px;
+  background-color: #FBF7F7;
+  border: none;
+  font-size: 12px;
+  padding-left: 35px;
+}
+section.main .background div.chat-container section.container div.column div.searchbar ::-moz-placeholder {
+  font-size: 12px;
+  color: #858585;
+}
+section.main .background div.chat-container section.container div.column div.searchbar :-ms-input-placeholder {
+  font-size: 12px;
+  color: #858585;
+}
+section.main .background div.chat-container section.container div.column div.searchbar ::placeholder {
+  font-size: 12px;
+  color: #858585;
+}
+section.main .background div.chat-container section.container div.column div.searchbar img {
+  position: absolute;
+  padding: 10px;
+}
+section.main .background div.chat-container section.container div.column div.chat-list {
+  padding: 15px 15px 0px 15px;
+  width: 100%;
+  max-height: 93%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+section.main .background div.chat-container section.container div.column ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+section.main .background div.chat-container section.container div.column div.chat-items {
+  display: flex;
+  width: 100%;
+  height: 45px;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details {
+  width: 100%;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details div.name {
+  width: 100%;
+  margin-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details div.name p {
+  font-size: 15px;
+  max-width: 200px;
+  font-weight: 400;
+  overflow: hidden;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details div.message-time {
+  margin-left: 5px;
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details div.message-time p.message {
+  font-size: 12px;
+  max-width: 130px;
+  overflow: hidden;
+  color: #858585;
+  margin-right: 5px;
+}
+section.main .background div.chat-container section.container div.column div.chat-items div.details div.message-time p.time {
+  margin-top: 2px;
+  font-size: 10px;
+  color: #858585;
+}
+section.main .background div.chat-container section.container div.vertical-line {
+  height: 100%;
+  border-left: 2px solid #EEEEEE;
+}
+section.main .background div.chat-container section.container div.chat-interface {
+  width: 100%;
+  height: 100%;
+}
+section.main .background div.chat-container section.container div.chat-interface div.header {
+  padding: 12px;
+  height: 60px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background div.chat-container section.container div.chat-interface div.header img {
+  margin-right: 5px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.header p {
+  font-size: 15px;
+  font-weight: 400;
+  margin-right: 8px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.header p.online {
+  height: 10px;
+  width: 10px;
+  background-color: #38CB3A;
+  border-radius: 50%;
+  display: inline-block;
+}
+section.main .background div.chat-container section.container div.chat-interface hr.horizontal-line {
+  border-top: 3px solid #EEEEEE;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns {
+  height: 100%;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation {
+  width: 78%;
+  height: 100%;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation .chat-bubbles {
+  height: 100%;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation ::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation hr.horizontal-line {
+  border-top: 2px solid #EEEEEE;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 10px 15px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input input {
+  width: 100%;
+  height: 35px;
+  background-color: #FBF7F7;
+  border: none;
+  border-radius: 5px;
+  font-size: 12px;
+  padding-left: 10px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input ::-moz-placeholder {
+  font-size: 12px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input :-ms-input-placeholder {
+  font-size: 12px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input ::placeholder {
+  font-size: 12px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input button {
+  display: flex;
+  border: none;
+  position: absolute;
+  justify-content: flex-end;
+  background-color: transparent;
+  padding-right: 10px;
+  cursor: pointer;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.conversation div.message-input p.vertical-line {
+  position: absolute;
+  height: 33px;
+  border-left: 2px solid #E6E7E8;
+  padding-right: 40px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.vertical-line {
+  border-left: 2px solid #EEEEEE;
+  height: 100%;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details {
+  width: 200px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.main {
+  height: 205px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.main div.container div {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+  text-align: center;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.main div.container p.name {
+  padding: 10px 15px 5px 15px;
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 600;
+  color: black;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.main div.container img {
+  height: 85px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.main div.container p {
+  font-size: 11px;
+  color: #858585;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details hr {
+  border-top: 2px solid #EEEEEE;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.information {
+  padding-top: 15px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.information div {
+  padding: 10px 15px;
+  display: flex;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.information img {
+  padding-right: 10px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.information p.data {
+  font-size: 11px;
+  line-height: 12px;
+}
+section.main .background div.chat-container section.container div.chat-interface div.columns div.person-details div.information p.circle {
+  height: 16px;
+  width: 16px;
+  background-color: #858585;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+section.main .background div.chat-container div.sender-container {
+  align-items: flex-end;
+  padding: 10px;
+}
+section.main .background div.chat-container div.sender-container div.date-time {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.main .background div.chat-container div.sender-container div.date-time p {
+  font-size: 8px;
+  color: #858585;
+}
+section.main .background div.chat-container div.sender-container div.group {
+  display: flex;
+}
+section.main .background div.chat-container div.sender-container div.group div.avatar {
+  display: flex;
+  align-items: flex-end;
+}
+section.main .background div.chat-container div.sender-container div.group div.avatar img.icon {
+  margin-right: 5px;
+}
+section.main .background div.chat-container div.sender-container div.group div.bubbles {
+  padding: 10px;
+  max-width: 290px;
+  background-color: #FFD7B0;
+  line-height: 13px;
+  font-size: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+section.main .background div.chat-container div.receiver-container {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+}
+section.main .background div.chat-container div.receiver-container div.date-time {
+  display: flex;
+  justify-content: center;
+}
+section.main .background div.chat-container div.receiver-container div.date-time p {
+  font-size: 8px;
+  color: #858585;
+}
+section.main .background div.chat-container div.receiver-container div.group {
+  display: flex;
+  justify-content: flex-end;
+}
+section.main .background div.chat-container div.receiver-container div.group div.bubbles {
+  padding: 10px;
+  max-width: 290px;
+  background-color: #FFD742;
+  line-height: 13px;
+  font-size: 12px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+section.main .background div.chat-container div.receiver-container div.group div.avatar {
+  display: flex;
+  align-items: flex-end;
+}
+section.main .background div.chat-container div.receiver-container div.group div.avatar img.icon {
+  margin-left: 5px;
+}
+
+div.sender-container {
+  align-items: flex-end;
+  padding: 10px;
+}
+div.sender-container div.date-time {
+  display: flex;
+  justify-content: center;
+}
+div.sender-container div.date-time p {
+  font-size: 8px;
+  color: #858585;
+}
+div.sender-container div.group {
+  display: flex;
+}
+div.sender-container div.group div.avatar {
+  display: flex;
+  align-items: flex-end;
+}
+div.sender-container div.group div.avatar img.icon {
+  margin-right: 5px;
+}
+div.sender-container div.group div.bubbles {
+  padding: 10px;
+  max-width: 290px;
+  background-color: #FFD7B0;
+  line-height: 14px;
+  font-size: 11px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+div.receiver-container {
+  justify-content: flex-end;
+  align-items: flex-end;
+  padding: 10px;
+}
+div.receiver-container div.date-time {
+  display: flex;
+  justify-content: center;
+}
+div.receiver-container div.date-time p {
+  font-size: 8px;
+  color: #858585;
+}
+div.receiver-container div.group {
+  display: flex;
+  justify-content: flex-end;
+}
+div.receiver-container div.group div.bubbles {
+  padding: 10px;
+  max-width: 290px;
+  background-color: #FFD742;
+  line-height: 14px;
+  font-size: 11px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+div.receiver-container div.group div.avatar {
+  display: flex;
+  align-items: flex-end;
+}
+div.receiver-container div.group div.avatar img.icon {
+  margin-left: 5px;
+}
+
+/*********************************************
+ * End Content : @Components
+ *********************************************/
+/*********************************************
+ * Start Content : @Signin Page
+ *********************************************/
+section.signin {
+  height: 100vh;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.signin div.__image {
+  flex: 5 0 auto;
+  position: relative;
+  height: inherit;
+  width: None;
+  background-image: url(../image/Signin.png);
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.signin div.__image img.__logo {
+  width: 20vw;
+  position: absolute;
+  bottom: 0;
+  left: 1.5vw;
+  transition: 0.4s ease;
+}
+section.signin div.__content {
+  margin-left: 35px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: 1;
+  flex-direction: Column;
+}
+section.signin div.__content img.__logo {
+  flex-grow: 2;
+  width: 100px;
+}
+section.signin div.__content div.__quote {
+  margin-top: 40px;
+  flex-grow: 1;
+  transition: 0.4s ease;
+  font-family: None;
+  font-size: 72px;
+  font-weight: None;
+  line-height: 0.85;
+  color: None;
+}
+section.signin div.__content div.__quote h1 {
+  font-weight: bolder;
+  color: #600C0D;
+}
+section.signin div.__content div.__quote h4 {
+  margin-top: 35px;
+  font-family: poppins;
+  font-size: 36px;
+  font-weight: bolder;
+  line-height: None;
+  color: None;
+}
+section.signin div.__content form.__form {
+  flex: 2 0 auto;
+}
+section.signin div.__content form.__form .__email-input, section.signin div.__content form.__form .__password-input {
+  margin-bottom: 14px;
+}
+section.signin div.__content form.__form .__email-input input, section.signin div.__content form.__form .__password-input input {
+  width: 300px;
+  border: 2px solid black;
+}
+section.signin div.__content form.__form div.__password-input div.__password {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+section.signin div.__content form.__form div.__password-input div.__password span {
+  position: relative;
+  left: -50px;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+section.signin div.__content form.__form button {
+  width: 300px;
+  height: 40px;
+  margin-top: 26px;
+  border-radius: 2rem;
+  transition: 0.4s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  background-color: #F7A440;
+  font-family: poppins;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: None;
+  color: None;
+}
+section.signin div.__content form.__form button:hover {
+  background-color: #f58d0f;
+}
+section.signin div.__content form.__form p.__disclaimer {
+  width: 300px;
+  padding: 10px;
+  font-family: poppins;
+  font-size: 10px;
+  font-weight: bold;
+  line-height: 1;
+  color: None;
+}
+
+/*********************************************
+ * End Content : @Signin Page
+ *********************************************/
+/*********************************************
+ * Start Content : @Profile Page
+ *********************************************/
+.__fade-color {
+  filter: contrast(0.6);
+}
+
+section.profile {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+section.profile div.cover-container {
+  position: relative;
+}
+section.profile div.cover-container img {
+  height: 280px;
+  width: 100%;
+  background-image: None;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+section.profile div.cover-container div.button {
+  position: absolute;
+  bottom: 40px;
+  right: 30px;
+  font-size: 18px;
+}
+section.profile div.cover-container div.button img {
+  height: 22px;
+  width: 24px;
+  background-image: None;
+  background-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  margin: 10px 0 0 10px;
+}
+section.profile div.cover-container div.button label {
+  font-size: 15px;
+  display: inline-block;
+  background-color: #F1F6F9;
+  padding: 10px 20px 10px 40px;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+section.profile .__cover-photo {
+  z-index: 1;
+  background-color: black;
+  height: 320px;
+}
+section.profile div.__profile-container {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.profile div.__profile-container div.__profile-box {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: row;
+  padding: 0 16px;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-icon {
+  position: relative;
+  top: -90px;
+  margin-right: 16px;
+  min-width: 180px;
+  height: 180px;
+  border-radius: 100%;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-icon div.plus-button {
+  position: absolute;
+  bottom: 10px;
+  right: 5px;
+  font-size: 20px;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-icon div.plus-button label {
+  font-size: 30px;
+  display: inline-block;
+  background-color: #F7A440;
+  color: white;
+  padding: 0px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-icon img {
+  width: inherit;
+  height: inherit;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information {
+  flex: 1 0 auto;
+  overflow-x: hidden;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information {
+  padding: 10px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: row;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:first-child {
+  line-height: 1.2;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:first-child h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:last-child {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:last-child .__exit-edit {
+  color: #600C0D;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:last-child .__exit-edit img {
+  height: inherit;
+  margin-left: 10px;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:last-child button {
+  font-size: 14px;
+  background-color: #e6e6e6;
+  padding: 2px 16px;
+  border-radius: 20px;
+  transition: 0.25s ease;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__information span:last-child button:hover {
+  background-color: #cccccc;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__increments {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: row;
+  padding: 12px 0;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__increments div {
+  margin-right: 20px;
+  font-size: 14px;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__increments div span {
+  font-weight: bold;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__biography {
+  width: 500px;
+  margin-bottom: 20px;
+}
+section.profile div.__profile-container div.__profile-box div.__profile-information div.__biography p {
+  width: inherit;
+  font-size: 14px;
+}
+section.profile div.__profile-container div.__tabs {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: None;
+}
+section.profile div.__profile-container div.__tabs button {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+  cursor: pointer;
+  padding: 10px 0;
+  width: 100%;
+  font-size: 16px;
+  transition: 0.25s ease;
+}
+section.profile div.__profile-container div.__tabs button img {
+  margin-right: 10px;
+  height: 16px;
+  width: 16px;
+}
+section.profile div.__profile-container div.__tabs button:hover {
+  color: #600C0D;
+}
+
+.active {
+  border-bottom: 3px solid #600C0D;
+}
+
+div.profile-information {
+  margin: 20px 0;
+}
+div.profile-information p {
+  padding: 5px 0;
+  font-weight: bold;
+  color: #F7A440;
+}
+div.profile-information .__profile-information {
+  border: 0.5px solid #858585;
+  border-radius: 10px;
+  padding: 20px 15px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+}
+div.profile-information .__profile-information > div {
+  margin: 0 10px;
+}
+div.profile-information .__profile-information > div label {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: None;
+}
+div.profile-information .__profile-information > div label img {
+  height: 16px;
+  margin-right: 5px;
+}
+div.profile-information .__profile-information > div textarea {
+  width: 100%;
+  height: 150px;
+  resize: none;
+  padding: 10px;
+}
+div.profile-information .__profile-information .__info {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  gap: 40px;
+}
+div.profile-information .__profile-information .__info > div {
+  width: 50%;
+}
+div.profile-information .__profile-information .__info > div input {
+  width: 100%;
+  border: 1px solid gray;
+}
+
+div.payment-details {
+  margin: 20px 0;
+}
+div.payment-details p.title {
+  padding: 5px 0;
+  font-weight: bold;
+  color: #F7A440;
+}
+div.payment-details .__payment-details {
+  border: 0.5px solid #858585;
+  border-radius: 10px;
+  padding: 20px;
+}
+div.payment-details .__payment-details .__channel p {
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: bolder;
+}
+div.payment-details .__payment-details .__details {
+  width: 100%;
+}
+div.payment-details .__payment-details .__details .__account {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.payment-details .__payment-details .__details .__account > div {
+  width: 50%;
+  padding: 0 10px;
+}
+div.payment-details .__payment-details .__details .__account input {
+  border: none;
+  background-color: #FFF7EE;
+  width: 100%;
+}
+div.payment-details .__payment-details .__details .__account label {
+  font-size: 16px;
+}
+div.payment-details .__payment-details .__details div.__number div.__input-number {
+  position: relative;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.payment-details .__payment-details .__details div.__number div.__input-number input {
+  padding-left: 75px;
+}
+div.payment-details .__payment-details .__details div.__number div.__input-number span {
+  font-size: 17px;
+  font-weight: 600;
+  position: absolute;
+  padding: 8px 0 0 15px;
+  color: #222222;
+}
+div.payment-details .__payment-details .__details div.__number div.__input-number div.vertical-line {
+  position: absolute;
+  border-left: 3px solid gray;
+  height: 25px;
+  margin: 7px 0 0 65px;
+}
+div.payment-details .__payment-details hr {
+  margin: 10px 0;
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+div.payment-details .button {
+  padding: 10px 0 8px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: baseline;
+  justify-content: flex-end;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.payment-details .button button {
+  color: white;
+  margin: 20px 0 10px 0;
+  padding: 5px 15px;
+  border-radius: 10px;
+  background-color: #F7A440;
+  font-size: 16px;
+  font-weight: bold;
+}
+div.payment-details .button button:hover {
+  background-color: #f58d0f;
+}
+
+/*********************************************
+ * End Content : @Profile Page
+ *********************************************/
+/*********************************************
+ * Start Content : @Main Page
+ *********************************************/
+section.main {
+  height: 100%;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.main div.__body {
+  height: inherit;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: row;
+  overflow: hidden;
+  margin: 0 14vw;
+}
+section.main div.__body div.__left, section.main div.__body div.__right {
+  padding: 20px 14px;
+  width: 280px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+section.main div.__body div.__container {
+  padding: 20px 40px;
+  flex: 1;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+/*********************************************
+ * End Content : @Main Page
+ *********************************************/
+/*********************************************
+ * Start Content : @Profile-Icon
+ *********************************************/
+a.profile-icon {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: None;
+}
+a.profile-icon img {
+  width: 3rem;
+}
+a.profile-icon .__name-right {
+  margin-left: 14px;
+  line-height: 1;
+}
+a.profile-icon .__name-right h3 {
+  width: 200px;
+}
+a.profile-icon .__name-right h3, a.profile-icon .__name-right p {
+  transition: 0.25s ease;
+}
+a.profile-icon .__name-right h3:hover, a.profile-icon .__name-right p:hover {
+  color: #F7A440;
+}
+a.profile-icon .__name-right p {
+  font-size: 14px;
+}
+a.profile-icon .__name-left {
+  margin-right: 14px;
+  color: white;
+}
+
+/*********************************************
+ * End Content : @Profile-Icon
+ *********************************************/
+/*********************************************
+ * Start Content : @RoomPage
+ *********************************************/
+.background-half {
+  position: relative;
+}
+.background-half::before {
+  content: "";
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  background-color: #FBF7F7;
+}
+
+.background {
+  position: relative;
+}
+.background::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-color: #FBF7F7;
+}
+
+div.room__announcement, div.room__participants {
+  margin: 30px;
+  background-color: #FFF7EE;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+div.room__announcement .__header, div.room__participants .__header {
+  background-color: #F7A440;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  padding-left: 20px;
+}
+div.room__announcement .__header p, div.room__participants .__header p {
+  text-transform: uppercase;
+  font-weight: 600;
+}
+div.room__announcement .__content, div.room__participants .__content {
+  overflow-y: scroll;
+  height: 95%;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-grow: None;
+  flex-direction: Column;
+}
+
+div.room__announcement {
+  margin-right: 0;
+  max-width: 1015px;
+}
+div.room__announcement .__content {
+  width: 100%;
+}
+div.room__announcement .__content .__heading {
+  height: None;
+  width: 100%;
+  display: flex;
+  align-items: None;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 15px 24px;
+}
+div.room__announcement .__content .__heading .__event {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: None;
+  gap: 10px;
+}
+div.room__announcement .__content .__heading .__event button::first-child img {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+div.room__announcement .__content .__heading .__event .__event-btn {
+  transition: 0.25s ease;
+  background-color: white;
+  padding: 0 24px;
+  border: 1px solid #F7A440;
+  font-size: 16px;
+  font-weight: bold;
+  color: #F7A440;
+  border-radius: 50px;
+}
+div.room__announcement .__content .__heading .__event .__event-btn:hover {
+  color: white;
+  background-color: #F7A440;
+}
+div.room__announcement .__content .__title {
+  width: 100%;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: space-between;
+  flex-grow: None;
+  flex-direction: None;
+  padding: 5px 24px;
+}
+div.room__announcement .__content .__title .__event-title {
+  flex-grow: 1;
+}
+div.room__announcement .__content .__title .__event-title h1 {
+  width: 750px;
+  font-size: 56px;
+  font-weight: bold;
+}
+div.room__announcement .__content .__title .__event-title .__event-date {
+  padding: 5px 0;
+}
+div.room__announcement .__content .__title .__event-status {
+  width: 200px;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: column;
+}
+div.room__announcement .__content .__title .__event-status span {
+  display: block;
+  padding: 5px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: center;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: center;
+}
+div.room__announcement .__content .__title .__event-status span img {
+  height: 20px;
+  margin-right: 5px;
+}
+div.room__announcement .__content .__description {
+  padding: 24px;
+}
+div.room__announcement .__content .__comment {
+  flex: 1 0 auto;
+  width: 100%;
+  height: 400px;
+  background-color: white;
+  overflow-y: scroll;
+  display: block;
+  padding: 10px 24px;
+}
+div.room__announcement .__content .__comment .__comment-profile {
+  margin: 10px 0 15px 20px;
+  position: relative;
+  padding: 20px 0;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: column;
+}
+div.room__announcement .__content .__comment .__comment-profile::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 3px;
+  border-radius: 50px;
+  background-color: #600C0D;
+  left: -20px;
+}
+div.room__announcement .__content .__comment .__comment-profile .__comment-message {
+  padding: 10px 0;
+  margin-left: 4rem;
+}
+div.room__announcement .__content .__chat {
+  background-color: white;
+  width: 100%;
+  border-top: 1px solid black;
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+}
+div.room__announcement .__content .__chat input {
+  flex: 1 0 auto;
+  display: inline;
+  padding: 10px 24px;
+  font-size: 18px;
+}
+div.room__announcement .__content .__chat button {
+  padding: 10px 24px;
+  display: inline;
+}
+div.room__announcement .__content .__chat button img {
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+
+div.room__participants {
+  width: 280px;
+  height: 92%;
+  flex: 1 0 auto;
+}
+div.room__participants .__content {
+  background-color: white;
+  padding: 8px 0;
+}
+div.room__participants .__content .__profile {
+  padding: 5px 15px;
+}
+
+/*********************************************
+ * End Content : @RoomPage
+ *********************************************/
+/*********************************************
+ * Start Content : @ErrorPage
+ *********************************************/
+section.error-page {
+  width: 100%;
+  height: 100%;
+  height: inherit;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: None;
+}
+section.error-page .__background {
+  z-index: -1;
+  width: 100%;
+  height: 250px;
+  background-color: #fdeeee;
+  position: absolute;
+}
+section.error-page .__error-message {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: None;
+  justify-content: None;
+  flex-grow: None;
+  flex-direction: None;
+  gap: 30px;
+}
+section.error-page .__error-message img {
+  height: 55vh;
+}
+section.error-page .__error-message .__message {
+  height: None;
+  width: None;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-grow: None;
+  flex-direction: column;
+}
+section.error-page .__error-message .__message h1 {
+  font-size: 34px;
+  font-weight: bold;
+}
+section.error-page .__error-message .__message p {
+  padding: 5px 0;
+  color: #898989;
+}
+section.error-page .__error-message .__message p span {
+  color: red;
+}
+section.error-page .__error-message .__message button {
+  margin-top: 30px;
+  padding: 2px 24px;
+  font-size: 16px;
+  border: 2px solid #600C0D;
+  font-weight: bold;
+  color: #600C0D;
+  border-radius: 5px;
+  transition: 0.25s ease;
+}
+section.error-page .__error-message .__message button:hover {
+  background-color: #600C0D;
+  color: white;
+}
+
+/*********************************************
+ * End Content : @ErrorPage
+ *********************************************//*# sourceMappingURL=style.css.map */

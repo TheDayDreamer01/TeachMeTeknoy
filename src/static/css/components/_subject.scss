@@ -1,0 +1,90 @@
+@import './variables';
+@import './mixins';
+
+
+section.subject {
+    @include FlexBox(
+        $flexDirection : column
+    );
+
+    & div.__title {
+        @include FlexBox(
+            $alignItems : center,
+            $justifyContent : space-between,
+            $flexDirection : row
+        );
+
+        h3 {
+            font-weight : bold;
+            text-transform: uppercase;
+            color : darken(map-get(
+                $button-color,
+                "dark-gray"
+            ), 20%);
+        }
+
+        button {
+            background-color: transparent;
+            @include FlexBox(
+                $alignItems : center
+            );
+
+            img {
+                width : 26px;
+            }
+        }
+    }
+
+    h4 {
+        padding : 10px 0;
+        font-weight : bold;
+        color : map-get(
+            $main-color,
+            "gold"
+        );
+    }
+
+    div.__subject{
+
+        div.__follow-subject {
+            padding : 6px 0;
+            @include FlexBox(
+                $justifyContent : space-between,
+                $alignItems : center,
+                $flexDirection : row
+            );
+            p {
+                font-size : map-get(
+                    $font-size-sm,
+                    "sm-5"
+                );
+            }
+
+            button {
+                cursor : pointer;
+                padding : 2px 8px;
+                border-radius: 12px;
+                background-color : map-get(
+                    $button-color,
+                    "gray"
+                );
+                font-size : map-get(
+                    $font-size-sm,
+                    "sm-4"
+                );
+
+                transition : map-get(
+                    $transition,
+                    ".2s"
+                );
+
+                &:hover {
+                    background-color: map-get(
+                        $button-color,
+                        "dark-gray"
+                    );
+                }
+            }
+        }
+    }
+}

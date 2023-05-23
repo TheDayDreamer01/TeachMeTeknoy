@@ -1,0 +1,58 @@
+@import './variables';
+@import './mixins';
+
+
+section.event-joined {
+    width : 100%;  
+    box-shadow : map-get(
+        $box-shadow,
+        "light"
+    );
+    border-radius : 5px;
+    margin-bottom : 20px;   
+
+    & .__header {
+        height : 30px;
+        background-color : map-get(
+            $main-color,
+            "gold"
+        );
+        border-top-right-radius : 5px;
+        border-top-left-radius : 5px;
+        
+        p {
+            @include AlignCenter;
+            font-weight : bold;
+        }
+    }
+    
+    & .__content {
+        background-color: white;
+        min-width : 50px;
+
+        border-bottom-right-radius : 5px;
+        border-bottom-left-radius : 5px;
+
+        .__event {
+            @include FlexBox(
+                $alignItems: flex-start,
+                $flexDirection : column
+            );
+            border : 1px solid rgb(228, 228, 228);
+            margin : 10px;
+            border-radius : 5px;
+            padding : 10px;
+
+            .__event-detail{
+                margin-top : 10px;
+                h4 {
+                    font-size: 14px;
+                }
+                p {
+                    font-size : 12px
+                }
+            }
+        }
+        
+    }
+}

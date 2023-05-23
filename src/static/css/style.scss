@@ -1,0 +1,1053 @@
+@import './components/defaults';
+@import './components/variables';
+@import './components/mixins';
+
+
+/*********************************************
+ * Start Content : @Components
+ *********************************************/
+@import './components/navbar';
+@import './components/subject';
+@import './components/post';
+@import './components/create';
+@import './components/create-event';
+@import './components/panel';
+@import './components/checkout';
+@import './components/error';
+@import './components/chat';
+
+/*********************************************
+ * End Content : @Components
+ *********************************************/
+
+ 
+/*********************************************
+ * Start Content : @Signin Page
+ *********************************************/
+section.signin {
+    @include FlexBox($height : 100vh);
+
+    div.__image {
+        flex: 5 0 auto; 
+        position : relative;
+        @include Image(
+            $height : inherit,
+            $backgroundImage : url(../image/Signin.png)
+        );
+
+        img.__logo {
+            width : 20vw;
+            position : absolute;
+            bottom : 0;
+            left : 1.5vw;
+            transition : map-get(
+                $transition,
+                ".4s"
+            );
+        }
+    }
+
+    div.__content {
+        margin-left : 35px;
+        @include FlexBox(
+            $flexGrow : 1,
+            $flexDirection : Column
+        );
+
+        img.__logo {
+            flex-grow : 2;
+            width : 100px;
+        }
+
+        div.__quote {
+            margin-top: 40px;
+            flex-grow : 1;
+            transition : map-get(
+                $transition,
+                ".4s"
+            ); 
+            @include TextStyle(
+                $fontSize : 72px,
+                $lineHeight : .85
+            );
+
+            h1 {
+                font-weight : bolder;
+                color : map-get(
+                    $main-color, 
+                    "maroon"
+                );
+            }
+            h4 {
+                margin-top: 35px;
+                @include TextStyle(
+                    $fontWeight : bolder,
+                    $fontSize : 36px,
+                    $fontFamily : map-get(
+                        $font-family,
+                        "text"
+                    ),
+                );
+            }
+        }
+
+        form.__form {
+            flex : 2 0 auto;
+            
+            .__email-input, .__password-input {
+                margin-bottom : 14px;
+
+                input {
+                    width : 300px;
+                    border : 2px solid black;
+                }
+            }
+            div.__password-input{
+
+                div.__password{
+                    @include FlexBox;
+                    
+              
+                    span{
+                        position : relative;
+                        left : -50px;
+                        @include AlignCenter;
+                    }
+                }
+            }
+
+            button {
+                width : 300px;
+                height : 40px;
+                margin-top: 26px;
+                border-radius : 2rem;
+                transition: map-get(
+                    $transition,
+                    ".4s"
+                );
+                box-shadow : map-get(
+                    $box-shadow,
+                    "light"
+                );
+                background-color : map-get(
+                    $main-color, 
+                    "gold"
+                );
+
+                @include TextStyle(
+                    $fontWeight: bold,
+                    $fontSize : map-get(
+                        $font-size-md,
+                        "md-1"
+                    ),
+                    $fontFamily : map-get(
+                        $font-family,
+                        "text"
+                    )
+                );
+
+                &:hover {
+                    background-color: map-get(
+                        $darken-color, 
+                        "gold"
+                    );
+                }
+            }
+        
+            p.__disclaimer {
+                width : 300px;
+                padding: 10px;
+                @include TextStyle(
+                    $lineHeight : 1,
+                    $fontWeight : bold,
+                    $fontSize : map-get(
+                        $font-size-sm, 
+                        "sm-2"
+                    ), 
+                    $fontFamily : map-get(
+                        $font-family,
+                        "text"
+                    ),
+                );
+            }
+        }
+    }
+}
+/*********************************************
+ * End Content : @Signin Page
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @Profile Page
+ *********************************************/
+.__fade-color {
+    filter : contrast(.6);   
+}
+
+section.profile {
+    @include FlexBox(
+        $flexDirection : column,
+    );
+    box-shadow : map-get(
+        $box-shadow,
+        "light"
+    );
+    
+    
+    div.cover-container{
+        position: relative;
+        img {
+            @include Image(
+                $height : 280px,
+                $width: 100%
+            );
+        }
+        div.button{
+            position: absolute;
+            bottom: 40px;
+            right: 30px;
+            font-size: 18px;
+
+            img{
+                @include Image(
+                    $height : 22px,
+                    $width: 24px
+                    );
+                position: absolute;
+                margin: 10px 0 0 10px;
+
+            }
+            label {
+                font-size: 15px;
+                display: inline-block;
+                background-color: #F1F6F9;
+                padding: 10px 20px 10px 40px;
+                border-radius: 0.3rem;
+                cursor: pointer;
+                }
+        }
+
+    }
+
+
+
+    
+    .__cover-photo{
+        z-index : 1;
+        background-color: black;
+        height : 320px;
+    }
+
+
+    div.__profile-container {
+        @include FlexBox(
+            $flexDirection : column
+        );
+
+        div.__profile-box {
+            @include FlexBox(
+                $flexDirection : row
+            );
+            padding : 0 16px;
+            
+            div.__profile-icon{
+                position : relative;
+                top : -90px;
+                margin-right : 16px;
+                min-width : 180px;
+                height : 180px;
+                border-radius : 100%;
+
+                div.plus-button {
+                        position: absolute;
+                        bottom:10px;
+                        right: 5px;
+                        font-size: 20px;
+
+                        label {
+                            font-size: 30px;
+                            display: inline-block;
+                            background-color: #F7A440;
+                            color: white;
+                            padding: 0px 15px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                        }
+                    }
+                
+                img {
+                    width : inherit; 
+                    height : inherit;
+                }
+
+                
+            }
+
+            div.__profile-information {
+                flex : 1 0 auto;
+                overflow-x : hidden;
+                @include FlexBox(
+                    $flexDirection : column
+                );
+
+                div.__information{
+                    padding : 10px 0;
+                    @include FlexBox(
+                        $flexDirection : row,
+                        $justifyContent : space-between
+                    );
+
+                    span {
+                        
+                        &:first-child{
+                            line-height : 1.2;
+                            h1 {
+                                font-size : 30px;
+                                font-weight : bold;
+                            }
+                        }
+
+                        &:last-child {
+                            @include AlignCenter(
+                                $justifyContent : center
+                            );
+
+                            .__exit-edit {
+                                
+                                color : map-get(
+                                    $main-color,
+                                    "maroon"
+                                );
+                                
+                                img {
+                                    height : inherit;
+                                    margin-left : 10px;
+                                }
+                            }
+
+                            button {
+                                font-size : map-get(
+                                    $font-size-sm,
+                                    "sm-4"
+                                );
+                                background-color : map-get(
+                                    $button-color,
+                                    "gray"
+                                );
+                                padding : 2px 16px;
+                                border-radius: 20px;
+                                transition : map-get(
+                                    $transition,
+                                    ".2s"
+                                );
+
+                                &:hover {
+                                    background-color : map-get(
+                                        $button-color,
+                                        "dark-gray"
+                                    );
+                                }
+                            }
+                        }
+                    }
+                }
+
+                div.__increments {
+                    @include FlexBox(
+                        $flexDirection : row
+                    );
+                    padding : 12px 0;
+
+                    div {
+                        margin-right : 20px;
+                        font-size : map-get(
+                            $font-size-sm,
+                            "sm-4"
+                        );
+                        span {
+                            font-weight : bold;
+                        }
+                    }
+                }
+
+                div.__biography {
+                    width : 500px;
+                    margin-bottom : 20px;
+
+                    p {
+                        width : inherit;
+                        font-size : map-get(
+                            $font-size-sm,
+                            "sm-4"
+                        );
+                    }
+
+                   
+                }
+            }
+        }
+
+        div.__tabs {
+            @include AlignCenter( 
+                $justifyContent : space-evenly
+                );
+                
+            button {
+                @include AlignCenter;   
+                cursor : pointer;
+                padding : 10px 0;
+                width : 100%;
+                font-size : map-get(
+                    $font-size-sm,
+                    "sm-5"
+                );
+                transition: map-get(
+                    $transition,
+                    ".2s"
+                );
+
+                img {
+                    margin-right : 10px;
+                    height : 16px;
+                    width :16px
+                }
+
+                &:hover {
+                    color : map-get(
+                        $main-color,
+                        "maroon"
+                    ); 
+                }
+            }
+        }
+    }
+}
+
+.active {
+    border-bottom: 3px solid map-get(
+        $main-color,
+        "maroon"
+    );
+}
+
+
+// Profile Information
+div.profile-information {
+    margin : 20px 0;
+
+    p {
+        padding : 5px 0;
+        font-weight : bold;
+        color : map-get(
+            $main-color,
+            "gold"
+        );
+    }
+
+    & .__profile-information {
+        border: 0.5px solid #858585;
+        border-radius : 10px;
+        padding : 20px 15px;
+        @include FlexBox(
+            $flexDirection : column
+        );
+        
+        > div {
+            margin : 0 10px;
+            
+            label {
+                @include AlignCenter(
+                    $justifyContent : flex-start
+                );
+                img {
+                    height : 16px;
+                    margin-right : 5px
+                }
+            }
+            
+            textarea {
+                width : 100%;
+                height : 150px;
+                resize : none;
+                padding : 10px;
+            }
+        }
+
+        .__info {
+            @include FlexBox;
+            gap : 40px;
+
+            > div {
+                width : 50%;
+
+                input {
+                    width : 100%;
+                    border : 1px solid gray;
+                }
+            }
+        }
+           
+    }
+}
+
+
+// Profile Payment Method
+div.payment-details {
+    margin: 20px 0;
+
+    p.title {
+        padding: 5px 0;
+        font-weight: bold;
+        color: map-get($main-color,
+                "gold"
+            );
+    }
+
+    & .__payment-details{
+        border: 0.5px solid #858585;
+        border-radius: 10px;
+        padding: 20px;
+
+        .__channel{
+            p{
+                font-size: 20px;
+                text-transform: uppercase;
+                font-weight: bolder;
+            }
+        }
+
+        .__details{
+            width: 100%;
+            
+            .__account{
+
+            > div {
+                    width: 50%;
+                    padding: 0 10px;
+                }
+                 @include FlexBox;
+                 input{
+                    border: none;
+                    background-color: #FFF7EE;
+                    width: 100%;
+                 }
+                 label{
+                    font-size: 16px;
+                 }
+            }
+            div.__number {
+
+                div.__input-number{
+                    position: relative;
+                    @include FlexBox;
+
+                    input {
+                        padding-left: 75px;
+                    }
+
+                    span{
+                        font-size: 17px;
+                        font-weight: 600;
+                        position: absolute;
+                        padding: 8px 0 0 15px;
+                        color: #222222;
+                    }
+                    div.vertical-line{
+                        position: absolute;
+                        border-left: 3px solid gray;
+                        height: 25px;
+                        margin: 7px 0 0 65px;
+                    }
+                
+                }
+            }
+
+        }
+
+        hr{
+            margin: 10px 0;
+            border: none;
+            height: 1px;
+            background-color: black;
+        }
+    }
+
+    .button{
+        padding: 10px 0 8px 0;
+        @include FlexBox(
+            $justifyContent: flex-end,
+            $alignItems: baseline
+        );
+        button {
+            color: white;
+            margin: 20px 0 10px 0;
+            padding: 5px 15px;
+            border-radius: 10px;
+            background-color: map-get(
+                $main-color, 
+                "gold"
+            );
+            font-size: 16px;
+            font-weight: bold;
+            transition: map-get($transition,
+                    "2s"
+                );
+    
+            &:hover {
+                background-color: map-get($darken-color,
+                        "gold"
+                );
+            }
+        }
+    }
+}
+
+
+
+
+/*********************************************
+ * End Content : @Profile Page
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @Main Page
+ *********************************************/
+section.main {
+    @include FlexBox(
+        $height : 100%,
+        $flexDirection : column
+    );
+    
+    div.__body {
+        @include FlexBox(
+            $height : inherit,
+            $flexDirection : row
+        );
+        overflow : hidden; 
+        margin : 0 14vw;
+
+        div.__left, div.__right {
+            padding : 20px 14px;
+            width : 280px;
+            overflow-y : scroll;
+            overflow-x : hidden;
+        }
+
+        div.__container {
+            padding : 20px 40px;
+            flex: 1;
+            overflow-y : scroll;
+            overflow-x : hidden;
+        }
+    }
+}
+/*********************************************
+ * End Content : @Main Page
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @Profile-Icon
+ *********************************************/
+a.profile-icon {
+    @include AlignCenter(
+        $justifyContent : flex-end
+    );
+
+    img {width : 3rem;}
+    
+    .__name-right {   
+        margin-left: 14px;
+        line-height : 1;
+
+        h3 {
+            width : 200px;
+        }
+        h3, p {
+            transition : map-get(
+                $transition,
+                ".2s"
+            );
+            &:hover {
+                color : map-get(
+                    $main-color,
+                    "gold"
+                );
+            }
+        }
+        p {
+            font-size : map-get(
+                $font-size-sm,
+                "sm-4"
+            );
+        }
+    }
+
+    .__name-left {
+        margin-right : 14px;
+        color : white;
+    }
+}
+/*********************************************
+ * End Content : @Profile-Icon
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @RoomPage
+ *********************************************/
+
+.background-half {
+    position : relative;
+
+    &::before {
+        content: "";
+        width : 50% ;
+        height : 100%;
+        position : absolute;
+        right : 0;
+        z-index : -1;
+        background-color : map-get(
+            $main-color,
+            "white"
+        );
+    }
+}
+.background {
+position : relative;
+
+    &::before {
+        content: "";
+        width : 100% ;
+        height : 100%;
+        position : absolute;
+        z-index : -1;
+        background-color : map-get(
+            $main-color,
+            "white"
+        );
+    }
+}
+
+div.room__announcement, div.room__participants {
+
+    margin : 30px;
+    background-color: #FFF7EE;
+    border-radius: 10px;
+    box-shadow : map-get(
+        $box-shadow,
+        "light"
+    );
+    overflow : hidden;
+
+    .__header{
+        background-color : map-get(
+            $main-color,
+            "gold"
+        );
+        height : 40px;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+        @include FlexBox(
+            $alignItems : center
+        );
+        padding-left : 20px;
+
+        p {
+            text-transform: uppercase;
+            font-weight : 600;
+        }
+    }   
+
+    .__content {
+        overflow-y : scroll;
+        height : 95%;  
+        @include FlexBox(
+            $justifyContent : flex-start,
+            $flexDirection : Column,
+            $alignItems : flex-start
+        );
+    }
+}
+
+div.room__announcement{
+    margin-right : 0;
+    max-width : 1015px;
+
+    .__content {
+        width : 100%;
+
+        .__heading {
+            @include FlexBox(
+                $width : 100%,
+                $justifyContent : space-between
+            );
+            padding : 15px 24px;
+
+            .__event {
+                @include AlignCenter(
+                    $justifyContent : flex-end
+                );
+                gap : 10px;
+
+                button::first-child {
+                    img {
+                        @include AlignCenter(
+                            $justifyContent : center
+                        );
+                    }
+                }
+
+                .__event-btn {
+                    transition : map-get(
+                        $transition,
+                        ".2s"
+                    );
+                    background-color: white;
+                    padding : 0 24px;
+                    border : 1px solid map-get(
+                        $main-color,
+                        "gold"
+                    );
+                    font-size : 16px;
+                    font-weight : bold;
+                    color: map-get(
+                        $main-color,
+                        "gold"
+                    );
+                    border-radius: 50px;
+
+                    &:hover {
+                        color : white;
+                        background-color : map-get(
+                            $main-color,
+                            "gold"
+                        );
+                        
+                    }
+                }
+            }
+        }
+
+        .__title {
+            width : 100%;
+            @include FlexBox(
+                $justifyContent : space-between
+            );
+            padding : 5px 24px;
+
+            .__event-title {
+                flex-grow : 1;
+                
+                h1 {
+                    width : 750px;
+                    font-size : 56px;
+                    font-weight : bold;
+                    font-family : map-get(
+                        $font-family,
+                        "montserrat"
+                    );
+                }
+                
+                .__event-date {
+                    padding : 5px 0;
+                }
+            }  
+            
+            .__event-status {
+                width : 200px;
+                @include FlexBox(
+                    $flexDirection : column,
+                    $alignItems : flex-start,
+                    $justifyContent : center
+                );
+
+                span {
+                    display : block;
+                    padding : 5px 0;
+                    @include FlexBox(
+                        $flexDirection : center,
+                        $alignItems : center
+                    );
+                    img {
+                        height : 20px;
+                        margin-right : 5px;
+                    }
+                }
+            }
+
+        }
+
+        .__description {
+            padding : 24px;
+        }
+
+        .__comment {
+            flex : 1 0 auto;
+            width : 100%;
+            height : 400px;
+            background-color : white;
+            overflow-y : scroll;
+            display : block;
+            padding : 10px 24px;
+
+            .__comment-profile {
+                margin : 10px 0 15px 20px;
+                position : relative;
+                padding : 20px 0;
+                @include FlexBox(
+                    $justifyContent : center,
+                    $alignItems : flex-start,
+                    $flexDirection : column
+                );
+
+                &::before {
+                    content : "";
+                    
+                    position: absolute;
+                    height : 100%;
+                    width : 3px;
+                    border-radius : 50px;
+                    background-color : map-get(
+                        $main-color,
+                        "maroon"
+                    );
+                    left : -20px;
+                }
+
+                .__comment-message {
+                    padding : 10px 0;
+                    margin-left : 4rem;
+                }
+            }
+        }
+
+        .__chat{
+            background-color : white;
+            width : 100%;
+            border-top : 1px solid black;
+            @include FlexBox(
+            );
+
+            input {
+                flex: 1 0 auto;
+                display : inline;
+                padding : 10px 24px;
+                font-size : 18px;
+            }
+
+            button {
+                padding : 10px 24px;
+                display : inline;
+
+                img {
+                    @include AlignCenter;
+                }
+            }
+        }
+    } 
+}
+
+div.room__participants{   
+    width : 280px;  
+    height : 92%;
+    flex : 1 0 auto;
+    
+    .__content {
+        background-color : white;
+        padding : 8px 0;
+        
+        .__profile {
+            padding : 5px 15px;
+        }
+    }
+}
+
+
+/*********************************************
+ * End Content : @RoomPage
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @ErrorPage
+ *********************************************/
+section.error-page {
+    width : 100%;
+    height : 100%;
+    @include AlignCenter;
+
+    & .__background {
+        z-index : -1;
+        width : 100%;
+        height : 250px;
+        background-color : lighten(map-get(
+            $main-color,
+            "maroon"
+        ), 75%);
+        position : absolute;
+    }
+    & .__error-message {
+        @include FlexBox;
+        gap : 30px;
+
+        img {
+            height : 55vh
+        }
+
+        & .__message {
+            @include FlexBox(
+                $alignItems : flex-start,
+                $justifyContent : center,
+                $flexDirection : column
+            );
+
+            h1 {
+                font-size : 34px;
+                font-weight : bold;
+            }
+            p {
+                padding : 5px 0;
+                color : #898989;
+                span {
+                    color : red
+                }
+            }
+
+            button {
+                margin-top : 30px;
+                padding : 2px 24px;
+                font-size : 16px;
+                border : 2px solid map-get(
+                    $main-color,
+                    "maroon"
+                );
+                font-weight : bold;
+                color : map-get(
+                    $main-color,
+                    "maroon"
+                );
+                border-radius : 5px;
+                transition : map-get(
+                    $transition,
+                    ".2s"
+                );
+
+                &:hover {
+                    background-color : map-get(
+                        $main-color,
+                        "maroon"
+                    );
+                    color : white;
+                }
+
+            }
+        }
+    }
+}
+
+/*********************************************
+ * End Content : @ErrorPage
+ *********************************************/

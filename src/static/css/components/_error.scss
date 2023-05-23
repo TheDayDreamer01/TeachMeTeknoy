@@ -1,0 +1,109 @@
+@import './variables';
+@import './mixins';
+
+
+section.background-error {
+    z-index : 999;
+    position : absolute;
+    width : 100%;
+    height : 100%;
+    overflow : hidden;
+    background-color : rgba(0, 0, 0, 0.4);
+    transition : map-get(
+        $transition,
+        ".4s"
+    );
+
+    & .__error-prompt {
+        position : relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width : 380px;
+        height : 330px;
+        box-shadow : map-get(
+            $box-shadow,
+            "light"
+        );
+        background-color : white;
+        border-radius : 10px;
+        animation : slideIn .3s ease;
+        
+        & .__heading {
+            @include AlignCenter;
+            background-color: map-get(
+                $main-color,
+                "maroon"
+            );
+            height : 120px;
+            border-top-right-radius : 10px;
+            border-top-left-radius : 10px;
+            img {
+                height : 50px;
+            }
+        }
+
+        & .__status {
+            @include FlexBox(
+                $height : calc(100% - 120px),
+                $justifyContent : center,
+                $alignItems : center,
+                $flexDirection : column
+            );
+
+            & .__message {
+                @include AlignCenter(
+                    $flexDirection : column
+                );
+                h1 {
+                    @include TextStyle(
+                        $fontSize : map-get(
+                            $font-size-md,
+                            "md-4"
+                        ),
+                        $color : map-get(
+                            $main-color,
+                            "maroon"
+                        ),
+                        $fontFamily : map-get(
+                            $font-family,
+                            "title"
+                        ),
+                        $fontWeight : bold
+                    );
+                    padding : 5px 0;
+                }
+                p {
+                    text-align : center;
+                    margin : 15px 40px;
+                }
+                button {
+                    background-color: map-get(
+                        $main-color,
+                        "maroon"
+                    );
+                    margin-top : 10px;
+                    padding : 5px 28px;
+                    color : white;
+                    border-radius : 50px;
+                    transition : map-get(
+                        $transition,
+                        ".2s"
+                    );
+
+                    &:hover {
+                        background-color : map-get(
+                            $darken-color,
+                            "maroon"
+                        );
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes slideIn{
+    from {top : 0%}
+    to {top : 50%}
+}

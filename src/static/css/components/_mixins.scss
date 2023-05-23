@@ -1,0 +1,87 @@
+@import './variables';
+
+
+/*********************************************
+ * Start Content : @Media Queries
+ *********************************************/
+@mixin MobileView{
+    @media screen and (max-width : 600px) {
+        @content;
+    }
+}
+
+@mixin TabletLandScapeView{
+    @media screen and (max-width : 1000px){
+        @content;
+    }
+}
+
+@mixin TabletPortraitView{
+    @media screen and (max-width : 800px){
+        @content;
+    }
+}
+/*********************************************
+ * End Content : @Media Queries
+ *********************************************/
+
+
+@mixin AlignCenter(
+    $justifyContent : center,
+    $flexDirection : None,
+){
+    height : inherit;
+    width : inherit;
+    display : flex;
+    justify-content: $justifyContent;
+    align-items : center;
+    flex-direction : $flexDirection;
+}
+
+@mixin FlexBox(
+    $height : None,
+    $width : None,
+    $alignItems : None,
+    $justifyContent : None,
+    $flexGrow : None,
+    $flexDirection : None
+){
+    height : $height;
+    width : $width;
+    display : flex;
+    align-items: $alignItems;
+    justify-content: $justifyContent;
+    flex-grow: $flexGrow;
+    flex-direction: $flexDirection;
+}
+
+
+@mixin Image(
+    $height : None,
+    $width : None,
+    $backgroundImage : None,
+    $backgroundPosition : center
+){
+    height : $height;
+    width : $width;
+    background-image : $backgroundImage;
+    background-position : $backgroundPosition;
+    object-fit: cover;
+    background-size : cover;
+    background-repeat : no-repeat;
+}
+
+
+@mixin TextStyle(
+    $fontFamily : None,
+    $fontSize : None,
+    $fontWeight : None,
+    $lineHeight : None,
+    $color : None
+) {
+    font-family : $fontFamily;
+    font-size : $fontSize;
+    font-weight : $fontWeight;
+    line-height : $lineHeight;
+    color : $color;
+}

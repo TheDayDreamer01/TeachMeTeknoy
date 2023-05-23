@@ -1,0 +1,178 @@
+@import './variables';
+@import './mixins';
+
+
+/*********************************************
+ * Start Content : @Navigation Bar
+ *********************************************/
+nav.navbar {
+    height : 8vh;
+    box-shadow : map-get(
+        $box-shadow,
+        "light"
+    );
+    background-color : map-get(
+        $main-color,
+        "maroon"
+    );
+
+    div.__container, a.__logo, form.searchbar{
+        @include AlignCenter(
+            $justifyContent : None
+        );
+    }
+
+    div.__container {
+        margin : $side-margin;
+
+        a.__logo, div.__profile {
+            width : 280px;
+            flex-grow : 1; 
+        }
+
+        /*********************************************
+         * Start Content : @Logo
+         *********************************************/
+        a.__logo {
+            img {width : 3rem;}
+            
+            span.__name {
+                margin-left: 10px;
+                font-weight : bold;
+
+                @include TextStyle(
+                    $fontFamily : map-get(
+                        $font-family,
+                        "title"
+                    ),
+                    $fontSize : map-get(
+                        $font-size,
+                        "md-normal"
+                    ),
+                    $color : map-get(
+                        $main-color, 
+                        "white"
+                    )
+                );
+
+                span {
+                    &:first-child {
+                        color : map-get(
+                            $main-color,
+                            "gold"
+                        );
+                    }
+
+                    &:last-child {
+                        -webkit-text-stroke-width: 0.1px;
+                        -webkit-text-stroke-color: map-get(
+                            $main-color,
+                            "white"
+                        );
+                        -webkit-text-fill-color: map-get(
+                            $main-color, 
+                            "maroon"
+                        );
+                    }
+                }
+            }
+        }
+        /*********************************************
+         * End Content : @Logo Container
+         *********************************************/
+
+
+        /*********************************************
+         * Start Content : @Profile-Dropdown
+         *********************************************/
+        div.__profile {
+            @include AlignCenter(
+                $justifyContent : flex-end
+            );
+            .__dropdown {
+                overflow: hidden;
+
+                &:hover .__content{
+                    display : block;
+                }
+
+                .__button {
+                    width : 40px;
+                    background-color: transparent;
+                }
+
+                .__content {
+                    z-index: 1;
+                    display: None;
+                    position: absolute;
+                    width : 160px;
+                    box-shadow: map-get(
+                        $box-shadow, 
+                        "light"
+                    );
+                    background-color : map-get(
+                        $main-color, 
+                        "white"
+                    );
+                    
+                    a {
+                        padding: 12px 16px;
+                        display: block;
+                        text-align: left;
+
+                        &:hover {
+                            background : rgb(235, 235, 235);
+                        }
+
+                        &:last-child{
+                            color : red;
+                        }
+                    }
+                }
+            }
+        }
+        /*********************************************
+         * End Content : @Profile-Dropdown
+         *********************************************/
+    }
+}
+/*********************************************
+ * End Content : @Navigation Bar
+ *********************************************/
+
+
+/*********************************************
+ * Start Content : @Search Bar
+ *********************************************/
+form.searchbar {
+    flex: 1 0 auto;
+    padding : 0 1rem;
+
+    input.__bar{
+        height : 2.5rem;
+        width : 24vw;
+        padding : 0 1.5rem;
+        border-radius : 50px 0 0 50px;
+        font-size : map-get(
+            $font-size-md,
+            "md-1"
+        );
+    }   
+        
+    button.__button{
+        width : 3rem;
+        height : 2.5rem;
+        border-radius : 0 50px 50px 0;
+        box-shadow : map-get(
+            $box-shadow,
+            "light"
+        );
+        background-color :  map-get(
+            $lighten-color,
+            "gold"
+        );  
+    }
+}
+/*********************************************
+ * End Content : @Search Bar
+ *********************************************/

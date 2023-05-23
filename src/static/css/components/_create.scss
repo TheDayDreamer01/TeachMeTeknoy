@@ -1,0 +1,83 @@
+@import './variables';
+@import './mixins';
+
+section.create-post {
+    padding: 0 20px;
+    margin : 0 40px;
+    width :  inherit;
+    height : 120px;
+    border-radius : 10px; 
+    box-shadow : map-get(
+        $box-shadow,
+        "light"
+    );
+    background-color : map-get(
+        $main-color, 
+        "white"
+    );
+
+    @include FlexBox(
+        $justifyContent : Center,
+        $flexDirection : column
+    );
+
+    >div {
+        flex-grow : 1;
+        
+    }
+
+    div:first-child {
+        @include FlexBox(
+            $alignItems : center
+        );
+        
+        a.__avatar {
+            width : 45px;
+            height : 45px;
+            border-radius: 50%;
+        }
+
+        h3 {
+            padding-left : 10px;
+            color : darken(map-get(
+                $button-color,
+                "dark-gray"
+            ), 20%) ;
+        }
+    }
+
+    div:last-child {
+        @include FlexBox(
+            $alignItems : center,
+            $justifyContent : space-evenly
+        );
+
+        a {
+            @include AlignCenter;   
+            padding : 2px 25px;
+            border-radius : 20px;
+            width : 100%;
+            transition : map-get(
+                $transition,
+                ".2s"
+            );
+            font-size : map-get(
+                $font-size-md,
+                "md-1"    
+            ); 
+
+            img {
+                margin : 0 10px; 
+            }
+
+            &:hover {
+                background-color: map-get(
+                    $button-color,
+                    "gray"
+                ) ;
+            }
+        }
+
+
+    }
+}

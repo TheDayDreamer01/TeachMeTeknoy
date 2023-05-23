@@ -1,0 +1,547 @@
+@import './variables';
+@import './mixins';
+
+
+//Checkout Page
+section.main{
+
+    .background-half{
+        @include FlexBox;
+
+        .left, .right {
+            flex : 1 0 auto;
+            width : 50%;
+        }
+        .left{
+            padding: 30px;
+            
+            div.checkout-title{
+                padding-top:10px;
+                h1 {
+                        color: #FBCA10;
+                        line-height: 40px;
+                        font-weight: bolder;
+                        font-size: 40px;
+                    }
+                
+                    p {
+                        font-size: 18px;
+                        font-family: 'Segoe UI';
+                        font-weight: 700;
+                        letter-spacing: 0.05em;
+                        line-height: 22px;
+                    }
+            }
+
+            div.cart{
+                @include FlexBox(
+                    $justifyContent: center
+                );
+                padding: 15px 10px;
+
+                .cart-container {
+                    padding: 20px;
+                    height: 400px;
+                    width: 500px;
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-color: #FBF7F7;
+                    border-radius: 15px;
+
+                div.body {
+                    max-height: 327px;
+                    overflow-y: scroll;
+                    overflow-x: hidden;
+                    padding: 5px 5px 5px 10px;
+
+                    .item {
+                        padding: 3px 0;
+                         .workshop-title {
+                            display: flex;
+
+                    img {
+                        width: 15px;
+                        height: 15px;
+                    }
+
+                    h6 {
+                        font-size: 16px;
+                        margin-left: 5px;
+                        font-weight: 600;
+                    }
+        }
+
+        .tutor-price {
+            @include FlexBox(
+                $justifyContent: flex-end
+            );
+
+            p.tutor {
+                font-size: 14px;
+                padding-right: 5px;
+            }
+
+            p.line {
+                height: 19px;
+                border-left: 2.5px solid #600C0D;
+            }
+
+            img {
+                padding: 0 5px 0 10px;
+            }
+
+            a.chat {
+                font-size: 12px;
+                color: #F7A440;
+                padding-top: 2px;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            p.price {
+                font-size: 15px;
+                font-weight: bold;
+                margin-left: 55px;
+            }
+
+        }
+    }
+
+} 
+
+    .total {
+        text-align: right;
+        margin-top: 12px;
+
+        p {
+            font-size: 12px;
+            font-weight: 700;
+
+            span.total-price {
+                color: #600C0D;
+                font-size: 18px;
+                margin-left: 10px;
+            }
+        }
+    }
+    /* width */
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+}
+}
+            .payment-methods {
+                padding: 20px;
+                @include FlexBox(
+                    $alignItems: center,
+                    $justifyContent: center
+                );
+               
+                div.container{
+                    p {
+                        font-size: 18px;
+                        font-weight: bolder;
+                        color: #FBCA10;
+                    }
+                   
+                    .__container {
+                        height: 105px;
+                        width: 500px;
+                        border: 2px solid #DDDDDD;
+                        border-radius: 5px;
+                        padding: 10px;
+
+                        input, label{
+                            width: 200px;
+                        }
+    
+                        .row1,
+                        .row2{
+                            display: flex;
+                            height: 50%;
+                            justify-content: center;
+                            
+                        }
+                    }
+
+                }
+            }
+
+            div.button{
+                @include FlexBox(
+                    $justifyContent: flex-end
+                );
+                .submit {
+                        width: 125px;
+                        height: 30px;
+                        border: none;
+                        font-size: 14px;
+                        text-align: center;
+                        font-weight: 500;
+                        color: white;
+                        background-color: #E17126;
+                        border-radius: 5px;
+                        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+                        float: right;
+                        margin-top: 8px;
+                        cursor: pointer;
+                    }
+                
+                    .submit:hover {
+                        background-color: #F7A440;
+                    }
+            }
+        }
+
+        .right{
+            padding: 30px;
+            
+            div.title{
+                @include FlexBox(
+                    $justifyContent: flex-start,
+                    $alignItems: center
+                );
+
+                h1{
+                    font-size: 40px;
+                    color: #FBCA10;
+                    font-weight: bolder;
+                }
+            }
+            div.payment-status {
+                padding: 35px;
+                @include FlexBox($justifyContent: center,
+                    $alignItems: center);
+
+                section.container {
+                    background-color: white;
+                    height: 240px;
+                    width: 500px;
+                    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+                    border-top-left-radius: 5px;
+                    border-top-right-radius: 5px;
+                    
+
+                    div.header {
+                        @include FlexBox($alignItems: center);
+                        height: 30px;
+                        width: inherit;
+                        background-color: #600D0F;
+                        border-top-left-radius: 5px;
+                        border-top-right-radius: 5px;
+
+                        p {
+                            margin-left: 10px;
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 600;
+                        }
+                    }
+
+                    .content {
+                        padding: 15px;
+                        max-height: 190px;
+                        overflow-y: scroll;
+                        overflow-x: hidden;
+
+                        .items {
+                            width: 100%;
+                            @include FlexBox($alignItems: center,
+                                $justifyContent: space-between);
+                            padding: 3px;
+
+                            div.group {
+                                @include FlexBox($justifyContent: flex-start,
+                                    $alignItems: center);
+                                width: 50%;
+
+                                img {
+                                    margin-right: 5px;
+                                }
+
+                                .event-name {
+                                    font-size: 11px;
+                                    line-height: 13px;
+                                    word-wrap: break-word;
+                                    max-width: 225px;
+                                }
+                            }
+
+
+                            .status {
+                                text-align: center;
+                                font-size: 13px;
+                                font-style: italic;
+                                color: #858585;
+                            }
+
+                            .status-confirmed {
+                                width: 15%;
+                                @extend .status;
+                                color: #38CB3A;
+                            }
+
+                            .meeting-link {
+                                width: 20%;
+                                font-size: 10px;
+                                font-weight: 600;
+                                text-decoration: underline;
+                                color: #F7A440;
+
+                            }
+                        }
+                    }
+                }
+            }
+
+            div.tutor-summary{
+                padding: 10px;
+
+                section.summary-container {
+                    width: 100%;
+                    height: 327px;
+                    background-color: #FBF7F7;
+                    margin-bottom: 25px;
+                    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
+                    border-radius: 5px;
+            
+                    div.header {
+                        @include FlexBox(
+                            $alignItems: center
+                        );
+                        height: 35px;
+                        background-color: #600D0F;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px;
+            
+                        img {
+                            height: 12px;
+                            margin: 0 5px 0 10px;
+                        }
+            
+                        p {
+                            font-size: 12px;
+                            color: white;
+                            padding: 2px;
+                        }
+                    }
+            
+                    div.content {
+                    padding: 20px 25px 10px 25px;
+
+                        .item-container {
+                            max-height: 165px;
+                            overflow-y: scroll;
+                            overflow-x: hidden;
+                            padding-bottom: 10px;
+
+                            .item {
+                                @include FlexBox;
+                                justify-content: space-between;
+                                padding: 2px 0;
+                                width: 100%;
+                                
+                                div.group{
+                                    @include FlexBox(
+                                        $alignItems: center,
+                                        );
+                                    img {
+                                        margin-right: 5px;
+                                        height: 15px;
+                                        width: 7px;
+                                    }
+    
+                                    p {
+                                        font-weight: 600;
+                                        font-size: 13px;
+                                        width: 1000px;
+                                        word-wrap: break-word;
+                                        max-width: 300px;
+                                        line-height: 14px;
+                                    }
+                                }
+
+                                p.price {
+                                    color: #858585;
+                                }
+                            }
+
+
+
+                        }
+
+                        .total {
+                            @include FlexBox(
+                                $alignItems: center,
+                                $justifyContent: flex-end
+                                );
+
+                            p {
+                                font-size: 12px;
+                            }
+
+                            .total-price {
+                                font-size: 15px;
+                                color: #F91018;
+                                font-weight: bold;
+                            }
+
+                        }
+                    }
+            
+                    /* width */
+    ::-webkit-scrollbar {
+        width: 0px;
+        height: 0px;
+    }
+            
+            .payment-methods {
+                @include FlexBox;
+                background: #FFFFFF;
+                border: 1px solid #D2D0D0;
+                height: 70px;
+                padding: 10px;
+    
+                .title {
+                    @include FlexBox(
+                        $alignItems: center,
+                        $justifyContent: center
+                    );
+                    width: 35%;
+    
+                    p {
+                        line-height: 13px;
+                        font-size: 15px;
+                        font-weight: 600;
+                        color: #600F12
+                    }
+                }
+                div.vertical-line {
+                    border-left: 2px solid #505050;
+                    
+                }
+                .group{
+                    @include FlexBox (
+                        $alignItems: center,
+                        $justifyContent: center
+                    );
+                    width: 55%;
+                .details {
+                    .channel {
+                        @include FlexBox;
+    
+                        img {
+                            margin-right: 3px;
+                            color: black;
+                            height: 10px;
+                        }
+    
+                        p.account {
+                            font-size: 12px;
+                            margin-right: 10px;
+                            font-weight: 600;
+                        }
+    
+                        p.info {
+                            font-size: 11px;
+                        }
+                    }
+                }
+            }
+                    }
+                
+                }
+            
+                div.proof {
+                    text-align: right;
+            
+                    a {
+                        font-size: 10px;
+                        font-style: italic;
+                        text-decoration: underline;
+                        color: #C1171A;
+                        font-weight: 700;
+                        cursor: pointer;
+            
+                        img {
+                            margin-right: 3px;
+                        }
+            
+                        &:hover {
+                            color: black;
+                        }
+                    }
+                }
+
+                div.summary-navigate {
+                    @include FlexBox(
+                        $justifyContent: flex-end,
+                        $alignItems: center
+                    );
+                    
+
+                    button{
+                        img {
+                            padding: 2px;
+                        }
+                    }
+                }
+
+                hr {
+                    margin-top: 5px;
+                }
+
+                
+            }
+        }
+        
+    }
+}
+
+
+
+
+.op {
+                    margin: 5px 15px 5px 10px;
+                    border-radius: 20px;
+                    background-color: #FBF7F7;
+                    overflow: hidden;
+                    float: left;
+                    box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.25);
+                }
+        
+                .op label {
+                    float: left;
+                    line-height: 1.5em;
+                    width: 8.0em;
+                    height: 4.0em;
+                }
+        
+                .op label span {
+                    text-align: center;
+                        display: block;
+                        font-size: 13px;
+                        line-height: 20px;
+                }
+        
+                .op label input {
+                    position: absolute;
+                    display: none;
+                    color: #fff !important;
+                }
+        
+                /* selects all of the text within the input element and changes the color of the text */
+                .op label input+span {
+                    color: black;
+                }
+        
+        
+                /* This will declare how a selected input will look giving generic properties */
+                .op input:checked+span {
+                    color: #ffffff;
+                    text-shadow: 0 0 1px rgba(0, 0, 0, 0.8);
+                }
+        
+                .pay input:checked+span {
+                    background-color: #600C0D;
+                }
